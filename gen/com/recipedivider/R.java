@@ -14,14 +14,19 @@ public final class R {
         public static final int app_bg=0x7f020000;
         public static final int btn_border=0x7f020001;
         public static final int btn_next=0x7f020002;
-        public static final int header_bg=0x7f020003;
-        public static final int ic_action_search=0x7f020004;
-        public static final int ic_launcher=0x7f020005;
-        public static final int input_field=0x7f020006;
-        public static final int input_lable=0x7f020007;
+        public static final int btn_next_pressed=0x7f020003;
+        public static final int header_bg=0x7f020004;
+        public static final int ic_action_search=0x7f020005;
+        public static final int ic_launcher=0x7f020006;
+        public static final int input_field=0x7f020007;
+        public static final int input_label=0x7f020008;
+        public static final int input_lable=0x7f020009;
+        public static final int next_button=0x7f02000a;
     }
     public static final class id {
-        public static final int menu_settings=0x7f070000;
+        public static final int button_container=0x7f070000;
+        public static final int main_container=0x7f070001;
+        public static final int menu_settings=0x7f070002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;

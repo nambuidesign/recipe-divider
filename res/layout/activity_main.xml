@@ -1,21 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#edede5"
-    android:orientation="vertical" >
+    android:background="#edede5" >
+
+    <FrameLayout
+        android:id="@+id/button_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="15dp"
+        android:background="@drawable/btn_border" >
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/next_button"
+            android:text="@string/next_btn"
+            android:textColor="#8d8d8d"
+            android:textSize="20sp" />
+    </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/main_container"
         android:layout_width="match_parent"
-        android:layout_height="0px"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_above="@id/button_container"
         android:orientation="vertical" >
 
         <ImageView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/empty"
-            android:src="@drawable/header_bg" />
+            android:background="@drawable/header_bg"
+            android:contentDescription="@string/empty" />
 
         <View
             android:layout_width="wrap_content"
@@ -34,24 +52,24 @@
             android:layout_width="match_parent"
             android:layout_height="32dp"
             android:layout_marginLeft="15dp"
-            android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
-            android:hint="@string/first_ingredient" 
-            android:background="@drawable/input_field"/>
+            android:layout_marginTop="10dp"
+            android:background="@drawable/input_field"
+            android:hint="@string/first_ingredient" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:padding="15dp">
+            android:padding="15dp" >
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/input_lable"
+                android:background="@drawable/input_label"
                 android:padding="7dp"
                 android:text="@string/quantity"
-                android:textColor="#FFFFFF"/>
+                android:textColor="#FFFFFF" />
 
             <EditText
                 android:layout_width="0px"
@@ -64,7 +82,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="@drawable/input_lable"
+                android:background="@drawable/input_label"
                 android:padding="7dp"
                 android:text="@string/units_of_measure"
                 android:textColor="#FFFFFF" />
@@ -88,19 +106,4 @@
             android:background="#f1eeea" />
     </LinearLayout>
 
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/btn_border"
-        android:layout_margin="15dp" >
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:background="@drawable/btn_next"
-            android:text="@string/next_btn"
-            android:textSize="20sp" />
-    </FrameLayout>
-
-</LinearLayout>
+</RelativeLayout>
